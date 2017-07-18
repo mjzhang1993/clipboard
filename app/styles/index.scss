@@ -1,0 +1,136 @@
+/* home页样式 */
+@import "common";
+
+body{
+	@include pa(0,0,0,0);
+	background: #eee;
+	font-size: 40px;
+	@include flexh;
+}
+
+
+.home-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	background: #ddd;
+	color: #fff;
+	@include flexv;
+	padding: 15px;
+	border-radius: 5px;
+}
+
+.card{
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+	background: #333;
+	padding: 10px;
+	border-radius: 6px;
+	&>h4{
+		font-size: 20px;
+	}
+	.describe{
+		color: #ccc;
+		font-size: 14px;
+		width: 100%;
+	}
+	.trigger{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.link{
+		display: block;
+		flex-grow: 1;
+		font-size: 20px;
+		border: none;
+		background: #eee;
+		margin: 0 5px;
+		color: #666;
+		border-radius: 10px;
+		outline: none;
+		cursor: pointer;
+		transition: all .3s ease;
+		&:active{
+			background: #666;
+			color: #eee;
+		}
+	}
+	.text{
+		display: block;
+		flex-grow: 1;
+		font-size: 20px;
+		border: none;
+		background: #eee;
+		margin: 0 5px;
+		color: #666;
+		border-radius: 10px;
+		outline: none;
+		cursor: pointer;
+		transition: all .3s ease;
+		&:active{
+			background: #666;
+			color: #eee;
+		}
+	}
+}
+
+.hide{
+	display: none;
+}
+
+/* 弹窗样式 */
+.pop-bg{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(2, 2, 2, .7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .1s ease;
+	.pop{
+		width: 60%;
+		height: auto;
+		color: #333;
+		font-size: 14px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		border-radius: 10px;
+		background: rgba(240, 240, 240, .9);
+		transform: scale(1, 1);
+		transition: all .3s ease;
+		&>p{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.type{
+				color: #FF5500;
+				margin-right: 5px
+			}
+		}
+	}
+}
+
+/* 第一阶段：pop 缩放背景颜色变换 */
+.pop-hide-0{
+	background: rgba(2, 2, 2, 0);
+	.pop{
+		transform: scale(0,.5);
+	}
+}
+第二阶段：消失
+.pop-hide-1{
+	display: none;
+	border: $br;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+      <title>主页</title>
+      <link rel="stylesheet" href="./styles/index.css">
+   </head>
+
+   <body>
+      <div class="home-container">
+         <div class="card hide">
+            <h4>this is title</h4>
+            <p class="describe">this is home page</p>
+            <div class="trigger">
+               <button class="link" data-clipboard-text="1">
+                  copy this
+               </button>
+               <button class="text" data-clipboard-text="1">
+                  copy this
+               </button>
+            </div>
+         </div>
+      </div>
+      <div id="pop-container">
+         <div class="pop">
+            <span class="title">title</span>
+            <p>
+               <span class="type">type</span>
+               <span>已复制到剪贴板</span>
+            </p>
+         </div>
+      </div>
+      <script src="./libs/clipboard.min.js" charset="utf-8"></script>
+      <script src="./scripts/index.js" charset="utf-8"></script>
+   </body>
+
+</html>

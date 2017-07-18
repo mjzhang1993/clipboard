@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* home页样式 */
+body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #eee;
+  font-size: 40px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  background: #ddd;
+  color: #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  background: #333;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.card > h4 {
+  font-size: 20px;
+}
+
+.card .describe {
+  color: #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.card .trigger {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .link {
+  display: block;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 20px;
+  border: none;
+  background: #eee;
+  margin: 0 5px;
+  color: #666;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.card .link:active {
+  background: #666;
+  color: #eee;
+}
+
+.card .text {
+  display: block;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 20px;
+  border: none;
+  background: #eee;
+  margin: 0 5px;
+  color: #666;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.card .text:active {
+  background: #666;
+  color: #eee;
+}
+
+.hide {
+  display: none;
+}
+
+/* 弹窗样式 */
+.pop-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(2, 2, 2, 0.7);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transition: all .1s ease;
+}
+
+.pop-bg .pop {
+  width: 60%;
+  height: auto;
+  color: #333;
+  font-size: 14px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(240, 240, 240, 0.9);
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+  transition: all .3s ease;
+}
+
+.pop-bg .pop > p {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pop-bg .pop > p .type {
+  color: #FF5500;
+  margin-right: 5px;
+}
+
+/* 第一阶段：pop 缩放背景颜色变换 */
+.pop-hide-0 {
+  background: rgba(2, 2, 2, 0);
+}
+
+.pop-hide-0 .pop {
+  -webkit-transform: scale(0, 0.5);
+      -ms-transform: scale(0, 0.5);
+          transform: scale(0, 0.5);
+}
+
+第二阶段：消失
+.pop-hide-1 {
+  display: none;
+  border: 1px solid red;
+}
